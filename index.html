@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="RB Manutenções Elétricas – Renato Bueno, eletricista residencial, industrial e automação. Emergência 24h pelo WhatsApp (11) 99714-5839.">
+<title>RB Manutenções Elétricas | Renato Bueno – Eletricista Predial</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f3f6fc;--card:#fff;--ink:#0d1a33;--mut:#5b6987;--line:#e0e7f4;--blue:#0b4fd6;--blue2:#06277a;--navy:#041a52;--sun:#ffc21a;--free:#12a150;--busy:#d92d3a;--part:#f59e0b;--sh:0 10px 30px rgba(8,30,90,.08);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#09111f;--card:#111b30;--ink:#e8eefc;--mut:#9aa9c9;--line:#21304f;--sh:0 10px 30px rgba(0,0,0,.35);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#09111f;--card:#111b30;--ink:#e8eefc;--mut:#9aa9c9;--line:#21304f;--sh:0 10px 30px rgba(0,0,0,.35);color-scheme:dark}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.top{background:var(--navy);color:#b9c8ee;font-size:13px}
+.top .wrap{display:flex;justify-content:space-between;gap:10px;padding-top:7px;padding-bottom:7px;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:20;background:rgba(6,39,122,.96);backdrop-filter:blur(8px);color:#fff;box-shadow:0 2px 14px rgba(0,0,0,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.brand b{display:block;font-size:17px;letter-spacing:.2px;line-height:1.2}
+.brand small{opacity:.8;font-size:12px}
+nav a{margin-left:22px;font-size:14px;opacity:.88;font-weight:500}
+nav a:hover{opacity:1;color:var(--sun)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:12px;font-weight:700;border:0;cursor:pointer;font-size:15px;font-family:inherit;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.btn-sun{background:var(--sun);color:#1a1300}.btn-wa{background:#25d366;color:#052e14}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.4)}
+.hero{position:relative;background:radial-gradient(900px 400px at 85% 10%,rgba(95,208,255,.25),transparent 60%),linear-gradient(135deg,var(--navy),var(--blue2) 45%,var(--blue));color:#fff;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(#000,transparent 90%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding-top:64px;padding-bottom:64px}
+.tag{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:99px;padding:6px 16px;font-size:13px;margin-bottom:18px}
+h1{font-size:clamp(32px,5.2vw,54px);line-height:1.08;margin:0 0 18px;letter-spacing:-.5px}
+h1 span{color:var(--sun)}
+.hero p{font-size:18px;opacity:.92;max-width:520px;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.chk{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:26px;font-size:14px;opacity:.95}
+.mascot{position:relative;display:flex;justify-content:center}
+.mascot svg{width:100%;max-width:330px;filter:drop-shadow(0 22px 28px rgba(0,0,0,.45));animation:fl 4s ease-in-out infinite}
+.bubble{position:absolute;top:2%;left:-2%;max-width:200px;background:#fff;color:#0d1a33;border-radius:16px 16px 16px 4px;padding:10px 14px;font-size:13px;font-weight:600;box-shadow:0 10px 24px rgba(0,0,0,.3)}
+@keyframes fl{50%{transform:translateY(-10px)}}
+@media (prefers-reduced-motion:reduce){.mascot svg{animation:none}.btn{transition:none}}
+.stats{margin-top:-34px;position:relative;z-index:2}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh);padding:20px 10px}
+.stats div{text-align:center;padding:4px 8px;border-right:1px solid var(--line);font-weight:700;font-size:15px}
+.stats div:last-child{border:0}.stats i{display:block;font-style:normal;font-size:26px}.stats small{display:block;color:var(--mut);font-weight:500;font-size:13px}
+section{padding:72px 0}
+.eyebrow{color:var(--blue);font-weight:800;font-size:13px;letter-spacing:1.5px;text-transform:uppercase}
+h2{font-size:clamp(26px,4vw,38px);margin:4px 0 10px;letter-spacing:-.3px}
+.sub{color:var(--mut);margin:0 0 34px;max-width:640px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--sh);transition:transform .2s}
+.card:hover{transform:translateY(-4px)}
+.ic{width:52px;height:52px;border-radius:15px;background:linear-gradient(135deg,var(--blue),var(--blue2));display:grid;place-items:center;font-size:24px;margin-bottom:14px}
+.card h3{margin:0 0 6px;font-size:18px}.card p{margin:0;color:var(--mut);font-size:15px}
+.steps .num{width:38px;height:38px;border-radius:50%;background:var(--sun);color:#1a1300;font-weight:800;display:grid;place-items:center;margin-bottom:12px}
+.alt{background:var(--card);border-block:1px solid var(--line)}
+.ag{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:start}
+.cal,.day{background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:22px}
+.cal-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.cal-h h3{margin:0;text-transform:capitalize;font-size:21px}
+.arr{width:40px;height:40px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:18px;cursor:pointer}
+.wd,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.wd span{text-align:center;font-size:12px;font-weight:700;color:var(--mut);padding:4px 0}
+.d{aspect-ratio:1;border-radius:12px;border:2px solid transparent;font-weight:700;font-size:15px;cursor:pointer;color:#fff;font-family:inherit}
+.d.free{background:var(--free)}.d.busy{background:var(--busy)}.d.part{background:linear-gradient(135deg,var(--free) 50%,var(--busy) 50%)}.d.wait{background:var(--part);color:#1a1300}.d.off{background:var(--line);color:var(--mut);cursor:not-allowed;opacity:.45}
+.d.past{background:var(--line);color:var(--mut);cursor:default;opacity:.55}
+.d.today{outline:3px solid var(--sun);outline-offset:1px}.d.sel{border-color:var(--ink);transform:scale(1.08)}.d.empty{visibility:hidden}
+.leg{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px;font-size:13px;color:var(--mut)}
+.leg i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:6px;vertical-align:-1px}
+.day h3{margin:0 0 4px;text-transform:capitalize}.day .hint{color:var(--mut);font-size:14px;margin:0 0 14px}
+.slots{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.s{display:block;text-align:center;padding:11px 8px;border-radius:11px;border:2px solid transparent;font-weight:700;font-size:14px;cursor:pointer;color:#fff;font-family:inherit}
+.s small{display:block;font-weight:500;font-size:11px;opacity:.92}
+.s.free{background:var(--free)}.s.free:hover{filter:brightness(1.1);transform:translateY(-2px)}
+.s.busy{background:var(--busy);opacity:.55;cursor:not-allowed}.s.wait{background:var(--part);color:#1a1300;cursor:not-allowed}.slots.one{grid-template-columns:1fr}.er{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px}.et{font-weight:700;font-size:14px;margin-bottom:8px}.eb{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.m{min-height:46px;border-radius:10px;border:2px solid var(--line);background:var(--bg);color:var(--ink);font-weight:700;font-size:13px;cursor:pointer;touch-action:manipulation;font-family:inherit}.m.on.free{background:var(--free);color:#fff;border-color:var(--free)}.m.on.wait{background:var(--part);color:#1a1300;border-color:var(--part)}.m.on.busy{background:var(--busy);color:#fff;border-color:var(--busy)}.seg{display:flex;gap:6px;margin:0 0 12px}.seg button{flex:1;padding:9px 6px;border-radius:10px;border:2px solid var(--line);background:var(--card);color:var(--ink);font-weight:700;font-size:13px;cursor:pointer;font-family:inherit}.seg button.on[data-tool=free]{background:var(--free);color:#fff;border-color:var(--free)}.seg button.on[data-tool=wait]{background:var(--part);color:#1a1300;border-color:var(--part)}.seg button.on[data-tool=busy]{background:var(--busy);color:#fff;border-color:var(--busy)}.nxt{margin-top:22px;display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:14px;padding:12px 16px;font-size:14px;flex-wrap:wrap}.nxt:empty{display:none}.nxt b{color:var(--sun)}.nxt a{background:#25d366;color:#052e14;font-weight:800;border-radius:9px;padding:7px 14px}.nxt .dot{width:10px;height:10px;border-radius:50%;background:#35e07a;box-shadow:0 0 0 4px rgba(53,224,122,.25)}
+.s.gone{background:var(--line);color:var(--mut);cursor:not-allowed}
+.ed{display:flex;gap:8px;margin-top:12px}
+.ed button{flex:1;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-weight:600;cursor:pointer;font-family:inherit}
+.bar{background:var(--sun);color:#1a1300;border-radius:12px;padding:10px 14px;font-weight:600;font-size:14px;margin-bottom:14px}
+.note{background:var(--card);border:1px dashed var(--line);border-radius:12px;padding:10px 14px;font-size:14px;color:var(--mut);margin-bottom:14px}
+.lock{margin-top:14px;font-size:13px;color:var(--mut)}
+.why{background:linear-gradient(135deg,var(--navy),var(--blue2));color:#fff}
+.why .eyebrow{color:var(--sun)}.why .sub{color:#c6d5fa}
+.why .grid{grid-template-columns:repeat(4,1fr)}
+.why .card{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2);box-shadow:none}.why .card p{color:#c6d5fa}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700}details p{color:var(--mut);margin:10px 0 0;font-size:15px}
+.fm{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--sh)}
+.fm label{display:block;font-weight:600;font-size:14px;margin:12px 0 5px}
+.fm input,.fm select,.fm textarea{width:100%;padding:12px 14px;border-radius:11px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
+.fm .btn{width:100%;margin-top:16px}
+footer{background:#030d2b;color:#9fb0d4;padding:36px 20px 26px;font-size:14px}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}
+footer b{color:#fff;display:block;margin-bottom:6px}footer p{margin:2px 0}
+.copy{text-align:center;margin-top:24px;padding-top:18px;border-top:1px solid #1b2a55;font-size:13px}
+.pil .c{width:88px;height:88px;border-radius:50%;background:var(--sun);display:grid;place-items:center;margin-bottom:14px;box-shadow:0 8px 20px rgba(255,194,26,.35)}.alert{margin-top:28px;background:rgba(255,194,26,.14);border:1px solid rgba(255,194,26,.55);border-radius:18px;padding:22px 24px}.alert h3{margin:0 0 8px;color:var(--sun)}.alert p{margin:6px 0;color:#e3ebff}.emg{background:var(--sun);color:#08205f;padding:26px 0}.emg .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.emg span{display:block;font-weight:800;letter-spacing:1px}.emg b{font-size:clamp(28px,5vw,46px);line-height:1.1}.modal{position:fixed;inset:0;background:rgba(3,13,43,.72);display:grid;place-items:center;z-index:50;padding:16px}.modal[hidden]{display:none}
+.mbox{background:var(--card);color:var(--ink);border-radius:20px;padding:26px;max-width:480px;width:100%;max-height:90vh;overflow:auto;box-shadow:0 24px 70px rgba(0,0,0,.5)}
+.mbox h3{margin:0 0 4px;font-size:22px}.mbox h4{margin:22px 0 4px}.mm{color:var(--mut);margin:0 0 6px;font-size:14px}
+.mbox label{display:block;font-weight:600;font-size:14px;margin:12px 0 5px}.mbox input[type=text],.mbox input[type=password]{width:100%;padding:12px 14px;border-radius:11px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
+.mrow{display:flex;gap:10px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap}.btn-ghost2{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.err{background:rgba(217,45,58,.12);color:var(--busy);border-radius:10px;padding:9px 12px;font-size:14px;margin-top:12px}.okm{background:rgba(18,161,80,.14);color:var(--free);border-radius:10px;padding:9px 12px;font-size:14px;margin-top:12px}
+.urow{display:flex;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid var(--line)}.urow b{flex:1}.urow small{font-weight:500;color:var(--mut)}
+.urow button,.bt button{padding:8px 12px;border-radius:9px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-weight:700;cursor:pointer;font-family:inherit}
+.bt{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}.bar small{display:block;font-weight:500}
+.wafab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;background:#25d366;color:#052e14;border-radius:99px;padding:13px 20px;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+@media (max-width:900px){.hero .wrap,.ag,.two{grid-template-columns:1fr}.grid,.why .grid{grid-template-columns:1fr 1fr}.stats .wrap{grid-template-columns:1fr 1fr;gap:12px 0}.stats div:nth-child(2){border:0}nav{display:none}.mascot svg{max-width:240px}.bubble{left:4%}footer .wrap{grid-template-columns:1fr}}
+@media (max-width:540px){.grid,.why .grid{grid-template-columns:1fr}.brand small,.top span+span{display:none}section{padding:52px 0}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="lgA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f80ff"/><stop offset="1" stop-color="#05246f"/></linearGradient>
+<linearGradient id="lgB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a2f8f"/><stop offset="1" stop-color="#041a52"/></linearGradient>
+<linearGradient id="lgC" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd95a"/><stop offset="1" stop-color="#ffb800"/></linearGradient>
+<symbol id="rb-logo" viewBox="0 0 120 120"><rect width="120" height="120" rx="26" fill="url(#lgA)"/><path d="M0 70 70 0h30L0 100z" fill="#fff" opacity=".07"/><path d="M40 120 120 40v30L70 120z" fill="#fff" opacity=".07"/>
+<path d="M60 11 95 24v26c0 20-15 34-35 41C40 84 25 70 25 50V24z" fill="url(#lgB)" stroke="url(#lgC)" stroke-width="4" stroke-linejoin="round"/>
+<path d="M65 22 44 54h13l-5 26 25-35H63z" fill="url(#lgC)"/>
+<circle cx="31" cy="30" r="2.4" fill="#ffc21a"/><circle cx="89" cy="30" r="2.4" fill="#ffc21a"/>
+<text x="60" y="113" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="19" letter-spacing="3" fill="#fff">RB</text></symbol></defs></svg>
+<div class="top"><div class="wrap"><span>🚨 Emergência 24h · WhatsApp (11) 99714-5839</span><span>🕗 Agendamentos de segunda a sábado · 18h às 22h</span></div></div>
+<header><div class="wrap nav">
+  <a class="brand" href="#topo" aria-label="RB Manutenções Elétricas">
+    <svg width="52" height="52" aria-hidden="true"><use href="#rb-logo"/></svg>
+    <span><b>RB Manutenções Elétricas</b><small>Renato Bueno · Eletricista</small></span>
+  </a>
+  <nav><a href="#servicos">Serviços</a><a href="#seguranca">Segurança</a><a href="#como">Como funciona</a><a href="#agenda">Agenda</a><a href="#faq">Dúvidas</a><a href="#contato">Orçamento</a></nav>
+  <a class="btn btn-sun" href="#agenda">📅 Agendar</a>
+</div></header>
+
+<main id="topo">
+<div class="hero"><div class="wrap">
+  <div>
+    <span class="tag">🚨 Emergência 24h · Atendimento rápido e seguro</span>
+    <h1>Elétrica <span>segura</span> para sua casa, prédio e indústria.</h1>
+    <p>Instalações, manutenção, quadros elétricos, comandos e automação, sempre com a segurança em primeiro lugar. Fale agora com o Renato pelo WhatsApp.</p>
+    <div class="cta"><a class="btn btn-wa" id="waEmerg" target="_blank" rel="noopener">🚨 Emergência 24h</a><a class="btn btn-sun" href="#agenda">📅 Ver horários livres</a></div>
+    <div class="nxt" id="nxt"></div>
+    <div class="chk"><span>✔ Profissional certificado</span><span>✔ Atendimento rápido e seguro</span><span>✔ Orçamento sem compromisso</span></div>
+  </div>
+  <div class="mascot">
+    <div class="bubble">Olá! Sou o RB Bot 🤖 Escolha um dia verde e chame o Renato.</div>
+    <svg viewBox="0 0 300 340" role="img" aria-label="Robô assistente de IA com capacete de eletricista">
+      <ellipse cx="150" cy="322" rx="90" ry="12" fill="#0005"/>
+      <line x1="150" y1="62" x2="150" y2="40" stroke="#cfdcff" stroke-width="5"/><path d="M158 20 143 40h10l-4 16 16-22h-11z" fill="#ffc21a"/>
+      <path d="M80 100a70 62 0 0 1 140 0z" fill="#ffc21a"/><rect x="70" y="96" width="160" height="14" rx="7" fill="#e6a800"/><rect x="138" y="52" width="24" height="46" rx="8" fill="#e6a800" opacity=".6"/>
+      <rect x="78" y="108" width="144" height="100" rx="34" fill="#f4f8ff"/><rect x="94" y="126" width="112" height="62" rx="24" fill="#0a2a78"/>
+      <circle cx="127" cy="154" r="11" fill="#5fd0ff"/><circle cx="173" cy="154" r="11" fill="#5fd0ff"/><circle cx="130" cy="151" r="3.5" fill="#fff"/><circle cx="176" cy="151" r="3.5" fill="#fff"/>
+      <path d="M133 172q17 13 34 0" stroke="#5fd0ff" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+      <rect x="66" y="140" width="12" height="36" rx="6" fill="#cfdcff"/><rect x="222" y="140" width="12" height="36" rx="6" fill="#cfdcff"/>
+      <rect x="92" y="214" width="116" height="84" rx="26" fill="#1e6bff"/><rect x="118" y="230" width="64" height="40" rx="10" fill="#0a3fb8"/><path d="M155 234l-14 20h10l-4 12 16-20h-10z" fill="#ffc21a"/>
+      <path d="M92 232q-38 6-40 40" stroke="#f4f8ff" stroke-width="20" stroke-linecap="round" fill="none"/><path d="M208 232q34-4 44-30" stroke="#f4f8ff" stroke-width="20" stroke-linecap="round" fill="none"/>
+      <g transform="rotate(-25 262 186)"><rect x="255" y="150" width="14" height="60" rx="4" fill="#e11d2e"/><rect x="258" y="124" width="8" height="30" rx="3" fill="#9aa9c9"/></g>
+      <rect x="40" y="262" width="26" height="22" rx="8" fill="#f4f8ff"/><rect x="112" y="296" width="30" height="24" rx="9" fill="#0a2a78"/><rect x="158" y="296" width="30" height="24" rx="9" fill="#0a2a78"/>
+    </svg>
+  </div>
+</div></div>
+
+<div class="stats"><div class="wrap"><div><i>🛡️</i>Segurança<small>NBR 5410 · NR-10</small></div><div><i>🚨</i>Emergência 24h<small>Pelo WhatsApp</small></div><div><i>🎓</i>Certificado<small>Profissional habilitado</small></div><div><i>📋</i>Orçamento<small>Sem compromisso</small></div></div></div>
+
+<section id="servicos"><div class="wrap">
+  <span class="eyebrow">Áreas de atuação</span><h2>Residencial, Industrial e Automação</h2><p class="sub">Do chuveiro da sua casa ao comando elétrico da máquina: o mesmo cuidado e a mesma segurança.</p>
+  <div class="grid pil">
+    <div class="card"><div class="c"><svg viewBox="0 0 64 64" width="44" height="44" fill="#0b3a9e"><path d="M32 9 7 31h8v23h12V40h10v14h12V31h8z"/></svg></div><h3>Residencial</h3><p>Casas e apartamentos: instalações, tomadas, iluminação, quadros e reparos.</p></div>
+    <div class="card"><div class="c"><svg viewBox="0 0 64 64" width="44" height="44" fill="#0b3a9e"><path d="M8 54V33l14 8V33l14 8V33l14 8V12h8v42z"/></svg></div><h3>Industrial</h3><p>Comandos elétricos, painéis e manutenção de máquinas e equipamentos.</p></div>
+    <div class="card"><div class="c"><svg viewBox="0 0 64 64" width="44" height="44" fill="#0b3a9e"><path d="M32 8 6 30h8v24h36V30h8z"/><circle cx="32" cy="38" r="7" fill="#ffc21a"/></svg></div><h3>Automação</h3><p>Automação residencial e predial: iluminação, portões e cenas inteligentes.</p></div>
+  </div>
+  <h2 style="margin-top:56px;font-size:26px">Nossos serviços</h2>
+  <div class="grid" style="margin-top:18px">
+    <div class="card"><div class="ic">💡</div><h3>Instalações</h3><p>Pontos de luz, tomadas, interruptores e circuitos novos, dimensionados com segurança.</p></div>
+    <div class="card"><div class="ic">🔧</div><h3>Manutenção</h3><p>Preventiva e corretiva: diagnóstico de desarmes, choques e fios aquecendo.</p></div>
+    <div class="card"><div class="ic">🔌</div><h3>Quadro elétrico</h3><p>Montagem, troca, ampliação e organização, com DR, DPS e circuitos identificados.</p></div>
+    <div class="card"><div class="ic">🏠</div><h3>Automação residencial</h3><p>Controle de luzes, cortinas, portões e equipamentos pelo celular.</p></div>
+    <div class="card"><div class="ic">⚙️</div><h3>Comandos elétricos</h3><p>Partidas de motores, contatores, painéis de comando e proteção de máquinas.</p></div>
+    <div class="card"><div class="ic">🚨</div><h3>Emergência 24h</h3><p>Falta de energia, curto-circuito, cheiro de queimado: chame a qualquer hora.</p></div>
+  </div>
+</div></section>
+
+<section id="como" class="alt"><div class="wrap">
+  <span class="eyebrow">Como funciona</span><h2>Agendar é simples</h2><p class="sub">Em três passos você garante o seu horário.</p>
+  <div class="grid steps">
+    <div class="card"><div class="num">1</div><h3>Escolha a data</h3><p>Atendimento de segunda a sábado, das 18h às 22h. Dias livres aparecem em verde.</p></div>
+    <div class="card"><div class="num">2</div><h3>Toque no horário</h3><p>Você é levado ao WhatsApp do Renato com a mensagem pronta.</p></div>
+    <div class="card"><div class="num">3</div><h3>Confirmação</h3><p>O Renato confirma com você e reserva o horário na agenda.</p></div>
+  </div>
+</div></section>
+
+<section id="agenda"><div class="wrap">
+  <span class="eyebrow">Agenda</span><h2>Horários disponíveis</h2><p class="sub">Atendimento de <b>segunda a sábado, das 18h às 22h</b>. Toque em um dia e depois em um horário <b style="color:var(--free)">livre</b>. Horários <b style="color:#b7791f">aguardando confirmação</b> ou <b style="color:var(--busy)">ocupados</b> não podem ser escolhidos.</p>
+  <div class="ag">
+    <div class="cal">
+      <div class="cal-h"><button class="arr" id="prev" aria-label="Mês anterior">‹</button><h3 id="mes"></h3><button class="arr" id="next" aria-label="Próximo mês">›</button></div>
+      <div class="wd"><span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span></div>
+      <div class="days" id="days"></div>
+      <div class="leg"><span><i style="background:var(--free)"></i>Livre</span><span><i style="background:linear-gradient(135deg,var(--free) 50%,var(--busy) 50%)"></i>Parcial</span><span><i style="background:var(--part)"></i>Aguardando</span><span><i style="background:var(--busy)"></i>Ocupado</span><span><i style="background:var(--line)"></i>Fechado/passado</span></div>
+    </div>
+    <div class="day" id="panel"></div>
+  </div>
+</div></section>
+
+<section id="seguranca" class="why"><div class="wrap">
+  <span class="eyebrow">Segurança em primeiro lugar</span><h2>Eletricidade não aceita improviso</h2><p class="sub">Cada serviço segue práticas que protegem você, sua família, seus equipamentos e seu patrimônio.</p>
+  <div class="grid">
+    <div class="card"><div class="ic">📐</div><h3>Normas técnicas</h3><p>Instalações conforme a NBR 5410 e práticas da NR-10.</p></div>
+    <div class="card"><div class="ic">🛡️</div><h3>Proteção contra choques</h3><p>Uso de DR (diferencial residual) e aterramento correto.</p></div>
+    <div class="card"><div class="ic">⚡</div><h3>Proteção de equipamentos</h3><p>DPS contra surtos e disjuntores no tamanho certo para cada circuito.</p></div>
+    <div class="card"><div class="ic">🔌</div><h3>Materiais de qualidade</h3><p>Fios, tomadas e disjuntores com certificação do Inmetro.</p></div>
+    <div class="card"><div class="ic">🔒</div><h3>Desenergização</h3><p>Circuito desligado e testado antes de qualquer intervenção.</p></div>
+    <div class="card"><div class="ic">🏷️</div><h3>Quadro identificado</h3><p>Circuitos etiquetados para facilitar o uso e futuras manutenções.</p></div>
+    <div class="card"><div class="ic">🧤</div><h3>EPIs e ferramentas isoladas</h3><p>Equipamentos de proteção e ferramentas adequadas ao trabalho.</p></div>
+    <div class="card"><div class="ic">✅</div><h3>Teste final</h3><p>Verificação do serviço e orientação de uso antes de entregar.</p></div>
+  </div>
+  <div class="alert"><h3>⚠️ Sinais de alerta: não espere piorar</h3>
+    <p>Chame um eletricista se notar: disjuntor desarmando toda hora, cheiro de queimado, choque ao encostar em aparelhos, tomadas ou fios quentes ou derretidos, luzes piscando ou faíscas.</p>
+    <p><b>Em caso de emergência:</b> se for seguro, desligue o disjuntor geral, não toque em fios nem use água e chame o Renato. Se houver fogo, ligue 193 (Bombeiros).</p></div>
+</div></section>
+<section class="emg"><div class="wrap"><div><span>🚨 EMERGÊNCIA 24H</span><b>(11) 99714-5839</b></div><a class="btn btn-wa" id="waBanner" target="_blank" rel="noopener">💬 Chamar agora no WhatsApp</a></div></section>
+
+<section id="faq"><div class="wrap two">
+  <div>
+    <span class="eyebrow">Dúvidas</span><h2>Perguntas frequentes</h2><p class="sub">O essencial antes de chamar.</p>
+    <details><summary>Vocês atendem emergência?</summary><p>Sim, 24 horas, pelo WhatsApp (11) 99714-5839. Os agendamentos do site seguem de segunda a sábado, das 18h às 22h.</p></details>
+    <details><summary>Como sei se o horário está confirmado?</summary><p>Ao tocar no horário, você fala com o Renato no WhatsApp. Ele marca o horário como aguardando confirmação e, depois de combinar tudo com você, como ocupado.</p></details>
+    <details><summary>O orçamento tem custo?</summary><p>Não. Descreva o problema e receba o orçamento sem compromisso.</p></details>
+    <details><summary>Que tipos de serviço o Renato faz?</summary><p>Instalações, manutenção, quadro elétrico, automação residencial e comandos elétricos, em casas, prédios e indústrias.</p></details>
+    <details><summary>Posso remarcar?</summary><p>Pode. Avise pelo WhatsApp com antecedência e escolha um novo horário livre.</p></details>
+  </div>
+  <div class="fm" id="contato">
+    <span class="eyebrow">Orçamento</span><h2 style="font-size:26px">Peça seu orçamento</h2>
+    <label for="fn">Seu nome</label><input id="fn" placeholder="Ex.: Maria Silva" autocomplete="name">
+    <label for="fs">Serviço</label><select id="fs"><option>Instalações</option><option>Manutenção</option><option>Quadro elétrico</option><option>Automação residencial</option><option>Comandos elétricos</option><option>Emergência</option><option>Outro</option></select>
+    <label for="fd">Descreva o que precisa</label><textarea id="fd" rows="3" placeholder="Ex.: disjuntor desarmando toda hora"></textarea>
+    <button class="btn btn-wa" id="fsend" type="button">💬 Enviar pelo WhatsApp</button>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div><b>RB Manutenções Elétricas</b><p>Renato Bueno · Eletricista Predial</p><p>Residencial · Industrial · Automação. Elétrica com segurança.</p></div>
+  <div><b>Contato</b><p>WhatsApp: (11) 99714-5839</p><p>Emergência 24h · Agenda seg a sáb, 18h às 22h</p></div>
+  <div><b>Navegação</b><p><a href="#servicos">Serviços</a></p><p><a href="#seguranca">Segurança</a></p><p><a href="#agenda">Agenda</a></p><p><a href="#contato">Orçamento</a></p><p><a href="#admin" data-act="open">🔒 Área restrita</a></p></div>
+</div><div class="copy">© <span id="ano"></span> RB Manutenções Elétricas. Todos os direitos reservados.</div></footer>
+<a class="wafab" id="waFab" target="_blank" rel="noopener">💬 WhatsApp</a>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true"><div class="mbox" id="mbox"></div></div>
+<script>
+var WA="5511997145839",HOURS=[18,19,20,21],MESES=["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],DIAS=["domingo","segunda-feira","terça-feira","quarta-feira","quinta-feira","sexta-feira","sábado"],LAB={free:"Livre",wait:"Aguardando confirmação",busy:"Ocupado"};
+var slots={},pending={},me=null,editor=false,dbOn=null,setupNeeded=false,saving=false,saveMsg="",view=new Date(),selKey=null;
+view.setDate(1);
+function $(i){return document.getElementById(i)}
+function pad(n){return String(n).padStart(2,"0")}
+function key(d){return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate())}
+function parse(k){var p=k.split("-");return new Date(+p[0],+p[1]-1,+p[2])}
+function wa(msg){return "https://wa.me/"+WA+"?text="+encodeURIComponent(msg)}
+function esc(t){return String(t).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function api(path,o){o=o||{};o.credentials="same-origin";
+  if(o.body&&typeof o.body!=="string"){o.body=JSON.stringify(o.body);o.headers={"Content-Type":"application/json"}}
+  o.method=o.method||(o.body?"POST":"GET");
+  return fetch(path,o).then(function(r){return r.json().catch(function(){return{}}).then(function(j){return{ok:r.ok,status:r.status,j:j}})})}
+function st(k,h){var d=slots[k];return(d&&d[h])||"free"}
+function dayStatus(k){var f=0,b=0;HOURS.forEach(function(h){var s=st(k,h);if(s==="free")f++;else if(s==="busy")b++});
+  if(f===HOURS.length)return"free";if(f>0)return"part";return b===HOURS.length?"busy":"wait"}
+function msgFor(dt,h){return "Olá Renato! Vim pelo site e gostaria de agendar um serviço elétrico no dia "+pad(dt.getDate())+"/"+pad(dt.getMonth()+1)+" ("+DIAS[dt.getDay()]+") às "+pad(h)+":00."}
+function nextFree(){var now=new Date(),i,j;
+  for(i=0;i<90;i++){var d=new Date(now.getFullYear(),now.getMonth(),now.getDate()+i);if(d.getDay()===0)continue;var k=key(d);
+    for(j=0;j<HOURS.length;j++){var h=HOURS[j];if(i===0&&h<=now.getHours())continue;if(st(k,h)==="free")return{d:d,h:h}}}
+  return null}
+function renderNext(){var el=$("nxt");if(!dbOn){el.innerHTML="";return}var n=nextFree();
+  el.innerHTML=n?'<span class="dot"></span><span>Próximo horário livre: <b>'+DIAS[n.d.getDay()]+', '+pad(n.d.getDate())+'/'+pad(n.d.getMonth()+1)+' às '+pad(n.h)+':00</b></span><a target="_blank" rel="noopener" href="'+wa(msgFor(n.d,n.h))+'">Agendar</a>':'<span>Sem horários livres nos próximos dias. Chame no WhatsApp.</span>'}
+function render(){
+  var y=view.getFullYear(),m=view.getMonth(),first=new Date(y,m,1).getDay(),total=new Date(y,m+1,0).getDate(),today=new Date();today.setHours(0,0,0,0);
+  $("mes").textContent=MESES[m]+" de "+y;
+  var h="",i;for(i=0;i<first;i++)h+='<div class="d empty"></div>';
+  for(i=1;i<=total;i++){var dt=new Date(y,m,i),k=key(dt),past=dt<today,sun=dt.getDay()===0,c=past?"past":(sun?"off":dayStatus(k));
+    h+='<button class="d '+c+(dt.getTime()===today.getTime()?" today":"")+(k===selKey?" sel":"")+'" data-k="'+k+'"'+((past||sun)?" disabled":"")+'>'+i+'</button>'}
+  $("days").innerHTML=h;panel();renderNext()}
+function panel(){
+  var p=$("panel"),h="";
+  if(editor&&me)h+='<div class="bar">🔧 Modo Renato · '+esc(me.name)+' · <span id="sv">'+esc(saveMsg)+'</span><div class="bt">'+(me.role==="admin"?'<button data-act="users">👥 Usuários e dados</button>':'')+'<button data-act="pw">🔑 Minha senha</button><button data-act="out">Sair</button></div><small>Em cada horário, toque em Livre, Aguardando ou Ocupado. Salva sozinho.</small></div>';
+  else if(dbOn===false)h+='<div class="note">Agenda indisponível no momento. Chame no WhatsApp para confirmar a data.</div>';
+  if(!selKey){p.innerHTML=h+'<h3>Escolha uma data</h3><p class="hint">Selecione um dia no calendário para ver os horários (18h às 22h).</p>';return}
+  var dt=parse(selKey),now=new Date(),isToday=key(now)===selKey;
+  h+='<h3>'+DIAS[dt.getDay()]+', '+dt.getDate()+' de '+MESES[dt.getMonth()]+'</h3><p class="hint">'+(editor?"Escolha o status de cada horário abaixo.":"Toque em um horário livre para chamar o Renato no WhatsApp.")+'</p>';
+  h+='<div class="slots'+(editor?' one':'')+'">';
+  HOURS.forEach(function(x){
+    var s=st(selKey,x),lab=pad(x)+':00 – '+pad(x+1)+':00',gone=isToday&&x<=now.getHours();
+    if(editor)h+='<div class="er"><div class="et">'+lab+'</div><div class="eb">'+['free','wait','busy'].map(function(v){return '<button class="m '+v+(s===v?' on':'')+'" data-h="'+x+'" data-v="'+v+'">'+{free:'Livre',wait:'Aguardando',busy:'Ocupado'}[v]+'</button>'}).join('')+'</div></div>';
+    else if(s==="busy")h+='<span class="s busy">'+lab+'<small>Ocupado</small></span>';
+    else if(s==="wait")h+='<span class="s wait">'+lab+'<small>Aguardando confirmação</small></span>';
+    else if(gone)h+='<span class="s gone">'+lab+'<small>Encerrado</small></span>';
+    else h+='<a class="s free" target="_blank" rel="noopener" href="'+wa(msgFor(dt,x))+'">'+lab+'<small>Livre · Agendar no WhatsApp</small></a>'});
+  h+='</div>';
+  if(editor)h+='<div class="ed" style="flex-wrap:wrap"><button data-all="free">Dia todo livre</button><button data-all="wait">Dia todo aguardando</button><button data-all="busy">Dia todo ocupado</button></div>';
+  else h+='<p class="lock">🔒 A agenda é atualizada somente pelo Renato, após confirmar com você.</p>';
+  p.innerHTML=h}
+function setSlot(k,h,s){var d=slots[k]||{};if(s==="free")delete d[h];else d[h]=s;if(Object.keys(d).length)slots[k]=d;else delete slots[k];(pending[k]=pending[k]||{})[h]=s}
+function showSv(){var e=$("sv");if(e)e.textContent=saveMsg}
+async function save(){
+  if(saving)return;saving=true;saveMsg="Salvando…";showSv();
+  try{
+    while(Object.keys(pending).length){
+      var k=Object.keys(pending)[0],set=pending[k];delete pending[k];
+      var r=await api("/api/agenda",{body:{date:k,set:set}});
+      if(r.status===401){editor=false;me=null;pending={};saving=false;saveMsg="";render();openLogin("Sua sessão expirou. Entre novamente.");return}
+      if(!r.ok)throw new Error(r.j.error||("erro "+r.status));
+    }
+    saveMsg="✓ Salvo"
+  }catch(e){saveMsg="⚠ Erro ao salvar: "+e.message}
+  saving=false;showSv()}
+$("days").addEventListener("click",function(e){var b=e.target.closest(".d");if(!b||!b.dataset.k||b.disabled)return;selKey=b.dataset.k;render()});
+$("panel").addEventListener("click",function(e){
+  if(!editor)return;
+  var s=e.target.closest("button.m"),a=e.target.closest("[data-all]");
+  if(s){setSlot(selKey,s.dataset.h,s.dataset.v);render();save();return}
+  if(a){HOURS.forEach(function(x){setSlot(selKey,x,a.dataset.all)});render();save()}});
+$("prev").onclick=function(){view.setMonth(view.getMonth()-1);render()};
+$("next").onclick=function(){view.setMonth(view.getMonth()+1);render()};
+$("fsend").onclick=function(){var n=$("fn").value.trim(),s=$("fs").value,d=$("fd").value.trim();
+  window.open(wa("Olá Renato! Meu nome é "+(n||"(não informado)")+". Gostaria de um orçamento para: "+s+"."+(d?" Detalhes: "+d:"")),"_blank","noopener")};
+/* ---------- área restrita ---------- */
+function modal(h){$("mbox").innerHTML=h;$("modal").hidden=false;var i=$("mbox").querySelector("input");if(i)i.focus()}
+function closeModal(){$("modal").hidden=true;$("mbox").innerHTML=""}
+function note(id,t,ok){var e=$(id);if(e){e.className=ok?"okm":"err";e.textContent=t}}
+function openLogin(msg){
+  modal('<h3>Área restrita</h3><p class="mm">Acesso da equipe da RB Manutenções Elétricas.</p>'+(setupNeeded?'<div class="err">O servidor ainda não tem nenhum usuário. Defina ADMIN_USER e ADMIN_PASSWORD na hospedagem.</div>':'')+(msg?'<div class="err">'+esc(msg)+'</div>':'')+
+  '<label for="lu">Usuário</label><input type="text" id="lu" autocomplete="username" autocapitalize="none" spellcheck="false"><label for="lp">Senha</label><input type="password" id="lp" autocomplete="current-password"><div id="le"></div>'+
+  '<div class="mrow"><button class="btn btn-ghost2" data-act="close">Cancelar</button><button class="btn btn-sun" data-act="login" data-primary="1">Entrar</button></div>')}
+async function doLogin(){
+  var r=await api("/api/login",{body:{user:$("lu").value,password:$("lp").value}});
+  if(!r.ok){note("le",r.j.error||"Não foi possível entrar.");return}
+  me=r.j.user;editor=true;saveMsg="";closeModal();render();loadAgenda()}
+function openPw(){modal('<h3>Minha senha</h3><label for="po">Senha atual</label><input type="password" id="po" autocomplete="current-password"><label for="pn">Nova senha (mín. 8 caracteres)</label><input type="password" id="pn" autocomplete="new-password"><div id="pe"></div><div class="mrow"><button class="btn btn-ghost2" data-act="close">Cancelar</button><button class="btn btn-sun" data-act="pwsave" data-primary="1">Salvar</button></div>')}
+async function doPw(){var r=await api("/api/password",{body:{old:$("po").value,new:$("pn").value}});if(!r.ok)return note("pe",r.j.error||"Erro");note("pe","Senha alterada com sucesso.",true);$("po").value="";$("pn").value=""}
+async function openUsers(msg,ok){
+  var r=await api("/api/users");if(!r.ok)return;
+  var h='<h3>Usuários e dados</h3><p class="mm">Quem pode editar a agenda.</p>';
+  r.j.users.forEach(function(u){h+='<div class="urow"><b>'+esc(u.name)+' <small>@'+esc(u.user)+(u.role==="admin"?' · admin':'')+'</small></b><button data-act="upw" data-id="'+u.id+'" title="Trocar senha">🔑</button>'+(u.id!==me.id?'<button data-act="udel" data-id="'+u.id+'" title="Remover">🗑️</button>':'')+'</div>'});
+  h+='<h4>Adicionar pessoa</h4><label for="un">Nome</label><input type="text" id="un"><label for="uu">Usuário (login)</label><input type="text" id="uu" autocapitalize="none" spellcheck="false"><label for="up">Senha (mín. 8 caracteres)</label><input type="text" id="up" autocomplete="off"><label><input type="checkbox" id="ua"> Pode gerenciar usuários (admin)</label><button class="btn btn-sun" data-act="uadd" style="margin-top:14px;width:100%">Adicionar</button>';
+  h+='<h4>Dados</h4><p class="mm">Guarde um backup da agenda e dos usuários de vez em quando.</p><div class="mrow" style="justify-content:flex-start;margin-top:8px"><button class="btn btn-ghost2" data-act="backup">⬇️ Baixar backup</button><button class="btn btn-ghost2" data-act="restore">⬆️ Restaurar</button></div><input type="file" id="rf" accept="application/json,.json" hidden>';
+  h+='<div id="ue" class="'+(msg?(ok?"okm":"err"):"")+'">'+(msg?esc(msg):"")+'</div><div class="mrow"><button class="btn btn-ghost2" data-act="close">Fechar</button></div>';
+  modal(h)}
+async function act(a,id){
+  if(a==="close")return closeModal();
+  if(a==="open"){if(me){closeModal();$("agenda").scrollIntoView();return}return openLogin()}
+  if(a==="login")return doLogin();
+  if(a==="out"){await api("/api/logout",{body:{}});me=null;editor=false;pending={};render();return}
+  if(a==="pw")return openPw();
+  if(a==="pwsave")return doPw();
+  if(a==="users")return openUsers();
+  if(a==="uadd"){var r=await api("/api/users/add",{body:{name:$("un").value,user:$("uu").value,password:$("up").value,admin:$("ua").checked}});return r.ok?openUsers("Usuário adicionado.",true):note("ue",r.j.error||"Erro")}
+  if(a==="udel"){if(!confirm("Remover este usuário? Ele perde o acesso na hora."))return;var r2=await api("/api/users/delete",{body:{id:id}});return r2.ok?openUsers("Usuário removido.",true):note("ue",r2.j.error||"Erro")}
+  if(a==="upw"){var np=prompt("Nova senha para este usuário (mínimo 8 caracteres):");if(!np)return;var r3=await api("/api/users/password",{body:{id:id,password:np}});return r3.ok?openUsers("Senha alterada.",true):note("ue",r3.j.error||"Erro")}
+  if(a==="backup"){var b=await api("/api/backup");if(!b.ok)return note("ue","Não foi possível gerar o backup.");
+    var blob=new Blob([JSON.stringify(b.j)],{type:"application/json"}),l=document.createElement("a");l.href=URL.createObjectURL(blob);l.download="backup-rb-"+key(new Date())+".json";document.body.appendChild(l);l.click();l.remove();return}
+  if(a==="restore"){$("rf").click()}}
+document.addEventListener("click",function(e){var el=e.target.closest("[data-act]");if(!el)return;e.preventDefault();act(el.dataset.act,el.dataset.id)});
+$("modal").addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.tagName==="INPUT"&&e.target.type!=="checkbox"){var b=$("mbox").querySelector("[data-primary]");if(b)b.click()}if(e.key==="Escape")closeModal()});
+$("modal").addEventListener("click",function(e){if(e.target===$("modal"))closeModal()});
+$("modal").addEventListener("change",function(e){if(e.target.id!=="rf"||!e.target.files[0])return;
+  if(!confirm("Restaurar este backup? A agenda e os usuários atuais serão substituídos."))return;
+  var fr=new FileReader();fr.onload=async function(){var j;try{j=JSON.parse(fr.result)}catch(x){return note("ue","Arquivo inválido.")}
+    var r=await api("/api/restore",{body:j});if(r.ok){await loadAgenda(true);openUsers("Backup restaurado.",true)}else note("ue",r.j.error||"Erro")};fr.readAsText(e.target.files[0])});
+/* ---------- carregar dados ---------- */
+async function loadAgenda(force){
+  var r;try{r=await api("/api/agenda")}catch(e){r=null}
+  if(!r||!r.ok){if(dbOn===null){dbOn=false;render()}return}
+  setupNeeded=!!r.j.setup;
+  if(!force&&(saving||Object.keys(pending).length))return;
+  var ns=r.j.slots||{};
+  if(dbOn!==true||JSON.stringify(ns)!==JSON.stringify(slots)){slots=ns;dbOn=true;render()}}
+async function loadMe(){try{var r=await api("/api/me");if(r.ok&&r.j.user){me=r.j.user;editor=true}}catch(e){}render()}
+$("ano").textContent=new Date().getFullYear();
+$("waFab").href=wa("Olá Renato! Vim pelo site e gostaria de um orçamento.");
+var EM=wa("🚨 EMERGÊNCIA! Preciso de um eletricista agora. Vim pelo site da RB Manutenções Elétricas.");$("waEmerg").href=EM;$("waBanner").href=EM;
+render();
+loadMe().then(function(){return loadAgenda()}).then(function(){if(location.hash==="#admin"&&!me)openLogin()});
+setInterval(loadAgenda,15000);
+</script>
+</body>
+</html>
