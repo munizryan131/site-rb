@@ -1,0 +1,8 @@
+{
+  "name": "rb-manutencoes-eletricas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site da RB Manutenções Elétricas com agenda e área restrita",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" }
+}
